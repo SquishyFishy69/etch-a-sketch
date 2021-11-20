@@ -1,0 +1,90 @@
+html{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: url(https://wallpaperaccess.com/full/2460992.jpg) no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    border-color: black;
+    width: 600px;
+    height: 600px;
+}
+
+.container .firstChild {
+    display: flex;
+    flex-direction: column;
+    background: #eeeeee;
+}
+
+.container .secondChild {
+    width: 75px;
+    height: 75px;
+}
+
+.body {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 48px;
+    color: #eeeeee;
+    margin: 20px;
+}
+
+.settings-left, .settings-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.settings-left [type=color] {
+    border-style: none;
+    height: 80px;
+    width: 80px;
+    border-radius: 10px;
+}
+
+.pixels {
+    background: black;
+    outline: none;
+}
+
+.settings-right [type=button] {
+    font-family: 'Courier New', Courier, monospace;
+    width: 150px;
+    font-size: 24px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    box-shadow: 5px 5px;
+    padding: 5px;
+}
+
+.settings-left-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+    
+footer {
+    padding: 20px;
+    margin: 20px 0 0 0;
+    background-color: #1F2937;
+    color: #F9FAF8;
+    font-size: 16px;
+    position: absolute;
+    bottom: 0; 
+}

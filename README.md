@@ -1,0 +1,1 @@
+This is website for Etch-a-Sketch, a project from The Odin Project. 
