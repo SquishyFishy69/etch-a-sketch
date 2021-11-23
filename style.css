@@ -35,9 +35,23 @@ body {
 
 h1 {
     font-size: 48px;
-    color: #eeeeee;
     margin: 20px;
+    -webkit-animation: rainbow 5s infinite; 
+    text-shadow: 2px 2px black;
 }
+@-webkit-keyframes rainbow{
+    0%{color: orange;}	
+    10%{color: purple;}	
+      20%{color: red;}
+    30%{color: CadetBlue;}
+      40%{color: yellow;}
+    50%{color: coral;}
+      60%{color: green;}
+    70%{color: cyan;}
+    80%{color: DeepPink;}
+    90%{color: DodgerBlue;}
+      100%{color: orange;}
+  }
 
 .settings-left, .settings-right {
     display: flex;
@@ -85,11 +99,11 @@ h1 {
     border-radius: 10px;
     border-style: solid;
     border-color: black;
-    box-shadow: 5px 5px;
+    box-shadow: 5px 5px black;
     padding: 5px;
 }
 
-.settings-right [type=button]:hover {
+.settings-right [type=button]:hover, .settings-left input:hover {
     transform: scale(1.05);
 }
 
@@ -131,3 +145,4 @@ footer {
     margin: 0;
     font-size: 24px;
 }
+

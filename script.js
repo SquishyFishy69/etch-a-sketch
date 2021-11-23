@@ -1,9 +1,11 @@
 let currentColor = '#000000';
+let rainbowClicked = false;
 const container = document.getElementsByClassName('container')[0];
 const currentPixels = document.getElementById('pixels');
 const pixelsText = document.querySelector(".settings-left-bottom p")
 const clearButton = document.getElementById('clear');
 const allChildren = document.getElementsByClassName('child');
+const rainbowButton = document.getElementById('rainbow');
 
 function createCells(numberOfCells) { // This function creates the cells where the drawing will take place
     container.style.gridTemplateColumns = `repeat(${numberOfCells}, 1fr)`;
@@ -38,7 +40,11 @@ function setPixelsP() { // This function sets the p tag according to the number 
 }   
 
 function showColour(e) { // This function shows the colour that is selected when mouse hovers over div
-    e.target.style.background = currentColor;
+    if (rainbowClicked) {
+        e.target.style.background = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)})`
+    } else {
+        e.target.style.background = currentColor;
+    }
 }
 
 clearButton.addEventListener("click", clearCells, false);
@@ -47,4 +53,15 @@ function clearCells() {
     Array.from(allChildren).forEach(element => {
         element.style.background = "white";
     });
+}
+
+rainbowButton.addEventListener("click", setRainbow, false);
+
+function setRainbow() {
+    rainbowClicked = !rainbowClicked;
+    if (rainbowClicked) {
+        rainbowButton.style.background = "linear-gradient(to left, red, orange, yellow, green, blue, indigo, violet)";
+    } else {
+        rainbowButton.style.background = "white";
+    }
 }
